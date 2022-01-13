@@ -1,0 +1,72 @@
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./w3.css" />
+  </head>
+  <body>
+    <input type="checkbox" name="" id="menu_control" />
+    <header>
+      <div class="maintitle">My Website</div>
+      <div class="menu_btn">
+        <img src="./menu_icon.svg" />
+      </div>
+      <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+      </label>
+      <nav>
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+        <a href="#">Item 4</a>
+      </nav>
+    </header>
+    <div class="welcome">
+      <div class="text">Welcome to MyHome</div>
+    </div>
+    <div class="warp"></div>
+    <script>
+      let clist_name = [];
+      let clist_img = [];
+      function createdata() {
+        let src =
+          "https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json";
+        fetch(src)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (result) {
+            let x = result.result.results;
+            let landmark = "";
+            for (let i in x) {
+              let landmark = x[i].stitle;
+              clist_name.push(landmark);
+            }
+            for (let i in x) {
+              let landmark = "https" + x[i].file.split("https")[1];
+              clist_img.push(landmark);
+            }
+            for (let i = 0; i < 8; i++) {
+              let pic = document.getElementsByClassName("warp")[0];
+              let divitem = document.createElement("item");
+              let divtext = document.createElement("div");
+              divitem.className = "item";
+              divtext.className = "pictext";
+              let imgNode = document.createElement("img");
+              imgNode.className = "cover";
+              let textNode = document.createTextNode(clist_name[i]);
+              imgNode.src = clist_img[i];
+              divtext.appendChild(textNode);
+              divitem.appendChild(imgNode);
+              divitem.appendChild(divtext);
+              pic.appendChild(divitem);
+            }
+          });
+      }
+      createdata();
+    </script>
+  </body>
+</html>
