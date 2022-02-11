@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='w4.css') }}/>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="title">歡迎光臨，請註冊登入系統</div>
+      </div>
+    </header>
+    <div class="signup_title">
+      <div>註冊帳號</div>
+    </div>
+    <form action="/signup" method="POST">
+      <div class="fg1">姓名<input type="text" name="name" /></div>
+      <div class="fg2">帳號<input type="text" name="username" /></div>
+      <div class="fg3">密碼<input type="password" name="password" /></div>
+      <div class="btn"><button>註冊</button></div>
+    </form>
+    <div class="signin_title">
+      <div>登入系統</div>
+    </div>
+    <form action="/signin" method="POST">
+      <div class="form-group1">帳號<input type="text" name="username" /></div>
+      <div class="form-group2">
+        密碼<input type="password" name="password" />
+      </div>
+      <div class="btn"><button>登入</button></div>
+    </form>
+  </body>
+</html>
