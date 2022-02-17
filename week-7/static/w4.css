@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(17, 19, 34);
+}
+.title {
+  font-size: 50px;
+  color: white;
+}
+
+.signup_title {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  padding: 50px;
+}
+.signin_title {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  padding: 35px;
+}
+.search_title {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  padding: 20px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s1 {
+  margin: 0.5rem;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-group1 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+.form-group2 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fg1 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+.fg2 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+.fg3 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+button {
+  padding: 0.5rem;
+}
+.lg {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
